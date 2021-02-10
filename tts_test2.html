@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width">
+
+        <script type="text/javascript">
+            var temp;
+                        
+            function output(){
+                var input2 = document.getElementById("input2").value;
+                temp = input2;
+                var finalURL = "http://translate.google.com/translate_tts?ie=UTF-8&amp;total=1&amp;idx=0&amp;textlen=32&amp;client=tw-ob&amp;q="+temp+"&amp;tl=ko-kr";
+                document.getElementById("output").value = finalURL;//데이터 출력이 잘 되고 있는지 확인용 추후 삭제 줄
+                let 
+                _video = document.querySelector('#textVideo');
+                _video.src= finalURL;
+                return;
+            }
+            
+            
+        </script>
+
+    </head>
+    <body>
+        <input type="text" id="input2" placeholder="출력할 텍스트를 입력하세요."><br>
+        <textarea id="output" placeholder="텍스트 입력 확인용 입니다.입력하지 마세요."></textarea>
+        <button onclick="output(); this.onclick='';">TTS 변환</button>
+        <br>
+        <video id="textVideo" src="http://translate.google.com/translate_tts?ie=UTF-8&amp;total=1&amp;idx=0&amp;textlen=32&amp;client=tw-ob&amp;q=테스트중입니다.&amp;tl=ko-kr" controls="" name="media" type="audio/mpeg">
+        </video>
+        <style>
+            .tb_button {padding:1px;cursor:pointer;border-right: 1px solid #8b8b8b;border-left: 1px solid #FFF;border-bottom: 1px solid #fff;}
+            .tb_button.hover {outline:2px outset #def; background-color: #f8f8f8 !important;}
+            .ws_toolbar {z-index:100000}
+            .ws_toolbar .ws_tb_btn {cursor:pointer;border:1px solid #555;padding:3px}
+            .tb_highlight{background-color:yellow}
+            .tb_hide {visibility:hidden}
+            .ws_toolbar img {padding:2px;margin:0px}
+        </style>
+    </body>
+    
+</html>
